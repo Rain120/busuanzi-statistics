@@ -1,0 +1,53 @@
+{
+  "name": "busuanzi-statistics",
+  "version": "0.0.1",
+  "description": "busuanzi statistics",
+  "main": "src/index.js",
+  "keywords": [
+    "不蒜子",
+    "pv",
+    "uv",
+    "busuanzi",
+    "statistics",
+    "busuanzi-statistics"
+  ],
+  "author": {
+    "name": "Rain120",
+    "url": "https://github.com/Rain120"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rain120/busuanzi-statistics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rain120/busuanzi-statistics/issues"
+  },
+  "homepage": "https://github.com/Rain120/busuanzi-statistics",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:js": "npx babel-cli src/index.js --out-file ./lib/busuanzi-statistics.js",
+    "build:min": "npx babel-minify src/index.js --out-file ./lib/busuanzi-statistics.min.js --mangle.keepClassName",
+    "build": "rm -rf ./lib/** & npm run build:js | npm run build:min",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "lint-staged": "lint-staged",
+    "prepublish": "npm run build"
+  },
+  "lint-staged": {
+    "{src}/**/*.{js}": [
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+        "pre-commit": [
+        "lint-staged"
+      ],
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4"
+  }
+}
