@@ -1,8 +1,8 @@
 {
   "name": "busuanzi-statistics",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "busuanzi statistics",
-  "main": "src/index.js",
+  "main": "lib/busuanzi-statistics.min.js",
   "keywords": [
     "不蒜子",
     "pv",
