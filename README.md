@@ -1,5 +1,6 @@
 <h3 align="center">
   <a href="https://github.com/Rain120/busuanzi-statistics">Bu Suan Zi Statistics</a>
+  <img src='./statistics.png' alt='statistics' width='100%' height='40%' />
 </h3>
 
 <div align="center">
@@ -48,7 +49,7 @@ document.querySelector('body').addEventListener('onloaded', () => {
 ##### CDN
 
 ```md
-<script src="https://cdn.jsdelivr.net/npm/busuanzi-statistics@0.0.1/lib/busuanzi-statistics.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/busuanzi-statistics@0.0.2/lib/busuanzi-statistics.min.js"></script>
 ```
 
 #### 🤝 Contributing ![PR](https://img.shields.io/badge/PRs-Welcome-orange?style=flat-square&logo=appveyor)
